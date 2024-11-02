@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/dist/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
     <h1 class="text-center text-6xl font-semibold mt-16 text-[#B03052] py-10">Happy Shopping!</h1>
-    <div id="main" class="flex flex-wrap items-center justify-around gap-5 border-2 mx-20"></div>
+    <div id="main" class="flex flex-wrap items-center justify-around gap-5 border-2 mx-10"></div>
 
     <script>
     
@@ -18,25 +18,21 @@
             data.products.forEach((item)=>{
                 let mainDiv = document.getElementById('main')
                 let newDiv = document.createElement('div')
-                newDiv.innerHTML = 
-                `
-                    
-                         <img src="${item.thumbnail}" alt="image">
+                newDiv.innerHTML = `<img src="${item.thumbnail}" alt="image">
                          <h4>Item Id : ${item.id}<h4>
                          <p>Item Title : ${item.title}</p>
                          <p>Item Category : ${item.category}</p>  
                          <p>Item Description : ${item.description}</p> 
-
                           <h4>Item Price : ${item.price}</h4> 
                            <p> Item AvailabilityStatus : ${item.availabilityStatus}</p>`
                            
                 mainDiv.appendChild(newDiv)
                 newDiv.style.padding = '30px';
-                newDiv.style.width = '500px';
-                newDiv.style.margin = '10px';
+                newDiv.style.width = '400px';
+                newDiv.style.margin = '20px 10px';
                 newDiv.style.borderRadius = '15px';
                 newDiv.style.fontSize  = '18px';
-                newDiv.style.border = '2px solid #3795BD'
+                newDiv.style.border = '3px solid #ddd';
                            
             })
 
